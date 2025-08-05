@@ -163,6 +163,36 @@ function showNotification(message, type = 'info') {
 // Typing animation removed to prevent HTML tag display issues
 
 // Hero animations moved to CSS - no JavaScript manipulation of hero content
+// IMPORTANT: Do not add any code that modifies .hero-title or .hero-title-fixed
+// This prevents HTML tags from showing as text
+
+// Protection: Ensure hero title HTML is never modified
+document.addEventListener('DOMContentLoaded', () => {
+    const heroTitle = document.querySelector('.hero-title-fixed');
+    if (heroTitle) {
+        // Store original HTML and protect it
+        const originalHTML = heroTitle.innerHTML;
+
+        // Create a mutation observer to prevent any changes
+        const protectionObserver = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.type === 'childList' || mutation.type === 'characterData') {
+                    // If content changed, restore original
+                    if (heroTitle.innerHTML !== originalHTML) {
+                        heroTitle.innerHTML = originalHTML;
+                    }
+                }
+            });
+        });
+
+        // Start observing
+        protectionObserver.observe(heroTitle, {
+            childList: true,
+            subtree: true,
+            characterData: true
+        });
+    }
+});
 
 // Parallax effect for hero section
 window.addEventListener('scroll', () => {

@@ -97,13 +97,20 @@ body {
     align-items: center;
 }
 
-.hero-title {
+.hero-title,
+.hero-title-fixed {
     font-size: 3.5rem;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1.5rem;
     opacity: 1 !important; /* Ensure title is always visible */
     animation: fadeInUp 1s ease-out;
+}
+
+/* Specific protection for hero title - NO JavaScript should touch this */
+.hero-title-fixed {
+    pointer-events: auto !important;
+    user-select: text !important;
 }
 
 @keyframes fadeInUp {
