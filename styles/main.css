@@ -103,7 +103,6 @@ body {
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1.5rem;
-    opacity: 1 !important; /* Ensure title is always visible */
     animation: fadeInUp 1s ease-out;
 }
 
@@ -111,6 +110,7 @@ body {
 .hero-title-fixed {
     pointer-events: auto !important;
     user-select: text !important;
+    animation: fadeInUp 1s ease-out !important; /* Ensure animation works */
 }
 
 @keyframes fadeInUp {
