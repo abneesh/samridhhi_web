@@ -102,6 +102,19 @@ body {
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1.5rem;
+    opacity: 1 !important; /* Ensure title is always visible */
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .gradient-text {
@@ -116,11 +129,13 @@ body {
     color: #666;
     margin-bottom: 2rem;
     line-height: 1.8;
+    animation: fadeInUp 1s ease-out 0.3s both;
 }
 
 .hero-buttons {
     display: flex;
     gap: 1rem;
+    animation: fadeInUp 1s ease-out 0.6s both;
 }
 
 .btn {

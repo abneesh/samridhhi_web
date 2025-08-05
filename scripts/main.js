@@ -160,63 +160,9 @@ function showNotification(message, type = 'info') {
     }, 5000);
 }
 
-// Typing animation for hero title
-function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.innerHTML = '';
-    
-    function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
-    }
-    
-    type();
-}
+// Typing animation removed to prevent HTML tag display issues
 
-// Initialize hero animations when page loads
-document.addEventListener('DOMContentLoaded', () => {
-    // Add fade-in animation to hero title
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) {
-        heroTitle.style.opacity = '0';
-        heroTitle.style.transform = 'translateY(30px)';
-        heroTitle.style.transition = 'opacity 1s ease, transform 1s ease';
-
-        setTimeout(() => {
-            heroTitle.style.opacity = '1';
-            heroTitle.style.transform = 'translateY(0)';
-        }, 500);
-    }
-
-    // Add fade-in animation to hero description
-    const heroDescription = document.querySelector('.hero-description');
-    if (heroDescription) {
-        heroDescription.style.opacity = '0';
-        heroDescription.style.transform = 'translateY(30px)';
-        heroDescription.style.transition = 'opacity 1s ease, transform 1s ease';
-
-        setTimeout(() => {
-            heroDescription.style.opacity = '1';
-            heroDescription.style.transform = 'translateY(0)';
-        }, 800);
-    }
-
-    // Add fade-in animation to hero buttons
-    const heroButtons = document.querySelector('.hero-buttons');
-    if (heroButtons) {
-        heroButtons.style.opacity = '0';
-        heroButtons.style.transform = 'translateY(30px)';
-        heroButtons.style.transition = 'opacity 1s ease, transform 1s ease';
-
-        setTimeout(() => {
-            heroButtons.style.opacity = '1';
-            heroButtons.style.transform = 'translateY(0)';
-        }, 1100);
-    }
-});
+// Hero animations moved to CSS - no JavaScript manipulation of hero content
 
 // Parallax effect for hero section
 window.addEventListener('scroll', () => {
