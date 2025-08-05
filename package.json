@@ -2,19 +2,14 @@
   "name": "samridhhigenai-website",
   "version": "1.0.0",
   "description": "Professional website for SamridhhiGenAI - AI Solutions Company",
-  "main": "index.html",
   "scripts": {
     "start": "python3 -m http.server 3000",
     "dev": "python3 -m http.server 3000",
-    "build": "./build.sh",
-    "serve": "python3 -m http.server $PORT"
+    "build": "echo 'Static site - no build required'"
   },
   "keywords": ["AI", "GenAI", "Machine Learning", "Technology", "Website"],
   "author": "SamridhhiGenAI",
   "license": "MIT",
-  "engines": {
-    "node": ">=14.0.0"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/abneesh/samridhhi_web.git"

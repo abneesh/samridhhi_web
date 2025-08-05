@@ -28,9 +28,11 @@ This guide will help you deploy the SamridhhiGenAI website on Render.com.
    ```
    Name: samridhhigenai-website
    Branch: main
-   Build Command: ./build.sh
+   Build Command: echo "Static site - no build required"
    Publish Directory: .
    ```
+
+   **Important**: Make sure to select "Static Site" not "Web Service"!
 
 5. **Advanced Settings (Optional)**
    - Add custom domain if needed
