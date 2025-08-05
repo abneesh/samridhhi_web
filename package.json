@@ -5,9 +5,19 @@
   "main": "index.html",
   "scripts": {
     "start": "python3 -m http.server 3000",
-    "dev": "python3 -m http.server 3000"
+    "dev": "python3 -m http.server 3000",
+    "build": "./build.sh",
+    "serve": "python3 -m http.server $PORT"
   },
-  "keywords": ["AI", "GenAI", "Machine Learning", "Technology"],
+  "keywords": ["AI", "GenAI", "Machine Learning", "Technology", "Website"],
   "author": "SamridhhiGenAI",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abneesh/samridhhi_web.git"
+  },
+  "homepage": "https://samridhhigenai.onrender.com"
 }
